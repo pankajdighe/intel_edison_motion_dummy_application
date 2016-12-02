@@ -13,6 +13,7 @@ def read_motion_data():
 #publish temperature
 while 1:
     t=read_motion_data()
+    print "Publishing data"
     (result,mid)=mqttc.publish("topic/GeneralizedIoT/motion",t,2)
     time.sleep(1)
 
